@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=24.0.0 <25" },
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,7 +14,7 @@
     "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
-    "@neondatabase/serverless": "1.2.1",
+    "@supabase/supabase-js": "2.119.2",
     "drizzle-orm": "0.45.4",
     "next": "16.4.6",
     "react": "19.2.9",

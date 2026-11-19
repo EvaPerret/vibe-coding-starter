@@ -1,14 +1,21 @@
 import 'server-only';
-import { neon } from '@neondatabase/serverless';
-import { drizzle } from 'drizzle-orm/neon-http';
-import * as schema from './schema';
+import { createClient } from '@supabase/supabase-js';
 
-export function getDb() {
-  const url = process.env.DATABASE_URL?.trim();
+export function getSupabase() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
+  const publishableKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY?.trim();
 
-  if (!url) {
-    throw new Error('Renseignez DATABASE_URL côté serveur avant d’utiliser la base Neon.');
+  if (!url || !publishableKey) {
+    throw new Error(
+      'Renseignez NEXT_PUBLIC_SUPABASE_URL et NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY avant d’utiliser Supabase.',
+    );
   }
 
-  return drizzle(neon(url), { schema });
+  return createClient(url, publishableKey, {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+      detectSessionInUrl: false,
+    },
+  });
 }
