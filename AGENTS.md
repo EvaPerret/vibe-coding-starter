@@ -4,7 +4,7 @@ Ce dépôt sert à créer le premier parcours utile d’une application web. Il 
 
 ## Mise en route
 
-Pour installer ou lancer le starter, suis [preparer-atelier](.agents/skills/preparer-atelier/SKILL.md). Le premier démarrage est local. Configure les services externes si l’utilisateur souhaite les utiliser.
+Suis [setup](.agents/skills/setup/SKILL.md) pour lancer le starter et le relier à Neon sur demande. Suis [publish](.agents/skills/publish/SKILL.md) pour une première mise en ligne sur Vercel ou une mise à jour demandée. Si la personne suit l’atelier, ouvre le [TP Dépenses entre amis](TP-depenses-entre-amis.md) et reste à l’étape qu’elle a demandée.
 
 ## Conception
 
@@ -27,4 +27,4 @@ Pour installer ou lancer le starter, suis [preparer-atelier](.agents/skills/prep
 
 ## Skills de conception
 
-Les recettes du projet sont dans `.agents/skills/`. Prends celle qui correspond à la décision en cours. Après un pivot, reprends le cadrage avant de retoucher le code. Le [README](README.md#skills-de-conception) indique quand utiliser chaque recette.
+Les skills du starter sont dans `.agents/skills/` pour Codex et `.claude/skills/` pour Claude Code. Quand tu modifies un skill fourni, répercute la modification dans les deux dossiers. Pour le TP, réutilise les skills existants et crée `cadrer-une-modification` seulement pendant l’exercice. Après un pivot, reprends le cadrage avant de retoucher le code. Le [README](README.md#skills-de-conception) indique quand utiliser chaque recette.

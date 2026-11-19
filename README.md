@@ -1,16 +1,18 @@
 # Vibe Coding Starter · Pepit’ozer
 
-Une base pour démarrer ton propre projet après l’atelier. Le dépôt contient une page à remplacer, un accès serveur à Neon et un schéma PostgreSQL vide. Tu peux esquisser ton interface avant de créer une base.
+Une base pour créer ton propre projet pendant l’atelier. Le dépôt contient une page à remplacer, un accès serveur à Neon et un schéma PostgreSQL vide. Tu peux esquisser ton interface avant de créer une base.
+
+**En atelier ?** Ouvre le [TP Dépenses entre amis · 30 min](TP-depenses-entre-amis.md). Le guide te donne les prompts à saisir, du modèle vierge à l’adresse de ton appli.
+
+Avant le chrono, vérifie avec le formateur que la machine peut lancer le starter et que l’agent a accès aux MCP Neon et Vercel de ton compte. Prépare ton dépôt GitHub public pour la démo. Le TP commence avec une copie locale du starter.
 
 ## Démarrer avec Codex ou Claude Code
 
 Ouvre une session **locale** de ton agent avec accès au terminal, dans le dossier où tu veux travailler. Connecte-toi à ton compte agent. Avant même d’avoir cloné le starter, tu peux lui envoyer ce message.
 
-> Prépare le starter de l’atelier Pepit’ozer sur cette machine. Vérifie Git et Node.js 24 et installe ce qui manque avec les outils officiels disponibles. Clone https://github.com/ThomasLaforge/vibe-coding-starter.git dans un nouveau dossier si besoin. Ouvre ensuite le fichier `.agents/skills/preparer-atelier/SKILL.md` du projet et suis le parcours local jusqu’à ce que la page d’accueil s’ouvre.
+> Pars du modèle https://github.com/ThomasLaforge/vibe-coding-starter et fais-en une copie de travail. Une fois dans la copie, lis le skill `setup` et utilise-le pour ouvrir la page de départ.
 
-Dans un dépôt déjà ouvert, demande simplement « Utilise le skill `preparer-atelier` et démarre le projet en local ». Dans Claude Code, tu peux aussi saisir `/preparer-atelier`. [Procédure suivie par l’agent](.agents/skills/preparer-atelier/SKILL.md)
-
-Si tu veux publier le prototype ou le relier à une vraie base, demande ensuite à l’agent de t’accompagner pour GitHub, Vercel ou Neon. Valide toi-même les connexions demandées dans le navigateur. Pour Neon, ajoute les URL dans `.env.local` si l’agent ne peut pas les récupérer via les outils officiels.
+Dans un projet déjà ouvert, demande « Utilise `setup` et lance mon appli ». Demande aussi la connexion à Neon si tu en as besoin. Utilise `publish` quand tu veux partager ton appli sur Vercel ou mettre à jour son adresse existante. [Setup](.agents/skills/setup/SKILL.md) · [Publish](.agents/skills/publish/SKILL.md)
 
 ## Démarrer à la main
 
@@ -24,17 +26,6 @@ npm run dev
 ```
 
 Ouvre [localhost:3000](http://localhost:3000) ou l’adresse affichée dans le terminal. Modifie `src/app/page.tsx` pour façonner ton premier parcours. Si tu as utilisé **Use this template** sur GitHub, clone l’adresse de ton nouveau dépôt à la place. Si tu as cloné celui-ci directement, crée un dépôt GitHub vide à ton nom et remplace `origin` avec `git remote set-url origin <url-de-ton-dépôt>` avant de pousser.
-
-## TP · Qui apporte quoi ?
-
-Partez du starter vierge et ouvrez `AGENTS.md`. Le TP porte sur un seul pique-nique et une liste préremplie. Une personne voit ce qui manque, saisit un prénom fictif et indique ce qu’elle apporte. La contribution doit apparaître sur un autre appareil, après actualisation.
-
-1. Avec [definir-mvp](.agents/skills/definir-mvp/SKILL.md), décrivez le parcours et le cas où deux personnes choisissent le même élément.
-2. Avec [preparer-atelier](.agents/skills/preparer-atelier/SKILL.md), identifiez le dépôt personnel et préparez une branche Neon de développement. Utilisez le MCP Neon si le compte est connecté, ou la console Neon. Reliez le dépôt à Vercel et associez Neon à l’environnement de prévisualisation.
-3. Avec [adapter-starter](.agents/skills/adapter-starter/SKILL.md), réalisez la page Next.js et la réservation côté serveur avec Drizzle. Appliquez la migration versionnée à la branche Neon utilisée par la démo.
-4. Ouvrez le déploiement de prévisualisation sur deux appareils ou dans deux sessions indépendantes. Faites une réservation dans la première, actualisez la seconde et vérifiez que la contribution apparaît. Si les deux personnes choisissent le même élément, seule la première réservation aboutit.
-
-Les MCP servent à l’agent pendant la mise en place. L’application accède à Neon via le module serveur `src/db/index.ts`. Vercel peut déployer automatiquement depuis le dépôt Git connecté.
 
 ## Ce que la stack apporte
 
@@ -54,7 +45,7 @@ Le pilote Neon HTTP convient aux requêtes courtes. Si une fonctionnalité a bes
 
 ## Déployer sur Vercel
 
-Importe ton propre dépôt comme projet Next.js et utilise Node.js 24. Lorsque ton parcours utilise Neon, ajoute `DATABASE_URL` côté serveur dans chaque environnement concerné et associe la préproduction et la production à leurs branches Neon respectives. Applique les migrations séparément avec l’URL directe de l’environnement visé. `npm run build` compile l’application.
+Avec un agent, utilise [publish](.agents/skills/publish/SKILL.md) et donne-lui le lien de ton dépôt personnel. Pour le TP, utilise le dépôt public préparé pour la démo et le MCP Vercel. À la main, importe ton dépôt comme projet Next.js et utilise Node.js 24. Lorsque ton parcours utilise Neon, ajoute `DATABASE_URL` côté serveur dans chaque environnement concerné et associe l’environnement déployé à la branche Neon choisie. Pour le TP, utilise une base réservée aux données fictives. Applique les migrations séparément avec l’URL directe de l’environnement visé. `npm run build` compile l’application.
 
 Pour travailler avec un agent, ouvre le dépôt et donne-lui ton brief issu du carnet. Les conventions du projet sont dans [AGENTS.md](AGENTS.md).
 
@@ -64,6 +55,8 @@ Ouvre le dépôt dans ton agent et choisis le skill qui correspond à ta prochai
 
 | Quand | Quel skill |
 | --- | --- |
+| Ouvrir le projet et le relier à Neon | [setup](.agents/skills/setup/SKILL.md) |
+| Publier ou mettre à jour un site Vercel | [publish](.agents/skills/publish/SKILL.md) |
 | Explorer une idée ou recadrer après un pivot | [cadrer-probleme](.agents/skills/cadrer-probleme/SKILL.md) |
 | Préciser les personas et les alternatives du marché | [etudier-public](.agents/skills/etudier-public/SKILL.md) |
 | Dessiner le parcours et son wireframe | [dessiner-parcours](.agents/skills/dessiner-parcours/SKILL.md) |

@@ -1,18 +1,25 @@
 ---
 name: definir-direction-visuelle
-description: Définir un système visuel justifié par un écran clé et son contexte d’usage. À utiliser pour choisir la hiérarchie, les couleurs, la typographie et les composants avant de les appliquer.
+description: Choisir une direction visuelle exploitable à partir d’un écran et de sa tâche principale. À utiliser pour fixer la hiérarchie, la palette et les composants qui serviront la maquette.
 ---
 
-## Traduire l’usage en choix visuels
+## Prioriser la lecture
 
-Lis l’écran clé et les références fournies. Décris ce que l’on doit repérer d’abord, ce que l’on peut lire ensuite et ce qui ne doit s’afficher qu’en cas de besoin. Si des références existent, relève les propriétés utiles au projet, comme la densité d’une liste ou la visibilité d’un statut. Respecte l’identité existante quand elle est fournie.
+Pars d’un écran connu. Identifie ce que la personne doit repérer en premier, le détail qui l’aide à décider et les informations qui peuvent attendre. Si l’utilisateur a donné des références, nomme ce que tu réutilises de leur approche, comme un contraste, une densité ou une hiérarchie. Respecte l’identité fournie.
 
-- **Couleurs.** Donne des valeurs et leurs rôles, notamment fond, surface, texte, action et états concernés. Relie chaque couleur de texte ou de bouton à son fond. Contrôle le contraste des paires proposées en tenant compte de la taille du texte. Ajoute un libellé lorsque la couleur porte une information.
-- **Typographie.** Donne une hiérarchie exploitable sur mobile avec tailles, graisses et interlignes pour les niveaux présents. Garde la police système du starter si rien ne justifie de la remplacer.
-- **Composants.** Précise la structure du composant clé, son libellé et ses états utiles. Vérifie que l’ordre de lecture et la navigation clavier suivent l’ordre du parcours. Réutilise les styles de focus. Propose une bibliothèque seulement pour un besoin identifié que les primitives du projet couvrent mal.
+## Produire des décisions applicables
 
-## Livrer une direction à appliquer
+| Décision | Ce qu’elle doit permettre |
+| --- | --- |
+| **Couleurs** | Donne des valeurs pour les rôles utilisés et précise les paires texte et fond. Les états importants ont aussi un libellé ou une icône. Vérifie le contraste des textes et de l’action principale sur leur fond. |
+| **Typographie** | Donne les tailles, graisses et interlignes des niveaux effectivement présents. Observe les montants et les libellés qui peuvent se retrouver côte à côte sur mobile. |
+| **Disposition** | Fais ressortir l’action sans réduire l’accès aux informations de décision. Précise l’ordre de lecture sur un écran étroit et le comportement d’un libellé long. |
+| **Composants** | Pour l’élément clé, indique les parties, le libellé et les états requis. Décris le focus visible et un retour compréhensible après action. |
 
-Rends **Tes choix visuels** sous la forme d’une proposition pour l’écran clé. Relie chaque décision à un effet attendu sur la lecture ou l’action. Si une implémentation est demandée, réutilise ou étends les tokens de `src/app/globals.css` et les classes Tailwind. Réserve les tokens aux valeurs qui ont un rôle partagé.
+Pour une proposition, livre une seule direction cohérente, avec une raison par choix important. Si l’utilisateur demande l’implémentation, réutilise les tokens de `src/app/globals.css`, Tailwind et les composants existants. Ajoute une valeur commune lorsqu’elle sert plusieurs éléments.
 
-Exemple fictif · Sur la liste du pique-nique, les noms des éléments dominent la ligne. La couleur d’accent distingue « Je m’en charge ». L’état « Pris par Lina » tient dans le même espace que l’action et reste compréhensible en niveaux de gris.
+## Rendre la direction
+
+Rends **Tes choix visuels**, sous forme d’une palette par rôle, d’une hiérarchie et d’un exemple d’écran annoté. Indique le détail que tu veux que la personne comprenne au premier regard.
+
+Exemple · Dans un écran de dépenses, un groupe de deux ou trois lignes « Lina récupère 20 € » et « Sam doit 10 € » peut apparaître avant l’historique. Utilise la couleur d’accent pour « Ajouter une dépense ». Les mots « récupère » et « doit » portent le sens des soldes, y compris quand on ne distingue pas leurs couleurs.

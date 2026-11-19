@@ -1,24 +1,25 @@
 ---
 name: cadrer-probleme
-description: Définir le problème à résoudre, le public concerné et un signe de réussite à partir d’une idée ou d’une situation vécue. À utiliser au début du projet ou après un pivot.
+description: Définir le problème à résoudre, le public concerné et un signe de réussite à partir d’une idée ou d’une situation vécue. À utiliser au début du projet ou après un changement de direction.
 ---
 
-## Partir du travail réel
+## Partir d’un épisode concret
 
-Reprends le brief ou les notes disponibles. Identifie la personne qui fait le travail, l’événement qui le déclenche, le résultat qu’elle cherche et la façon dont elle s’y prend aujourd’hui. Si l’idée commence par une solution (« je veux une application »), cherche le dernier épisode qui lui a donné cette idée.
+Relis les éléments déjà donnés. Repère qui agit, ce qui déclenche l’action, le résultat recherché et la manière de faire actuelle. Si la demande commence par une idée de solution, demande quel épisode récent lui a donné naissance.
 
-Pose une question à la fois, à partir de ce qui manque. « Raconte-moi la dernière fois que ça s’est produit » peut suffire à révéler l’outil utilisé, le contournement et sa conséquence. Si aucune situation vécue n’est disponible, formule un cadrage provisoire et indique qui pourrait le confirmer.
+Pose une question à la fois et utilise la réponse pour choisir la suivante. « Raconte-moi la dernière fois que ça s’est produit » aide à obtenir des faits. « Qu’as-tu fait ensuite ? » révèle un contournement. « Qu’est-ce que ça a changé pour toi ? » établit la conséquence.
 
-## Choisir une friction
+## Choisir le problème à traiter
 
-Si plusieurs problèmes ressortent, compare leur fréquence, leur conséquence et ta capacité à rencontrer les personnes concernées. Choisis un public dans un contexte identifiable. Si l’organisateur et le participant ont des difficultés différentes, précise laquelle tu prends en charge en premier et à quel moment l’autre personne intervient.
-
-Sépare fait observé, témoignage et hypothèse. Pour le signe de réussite, décris un comportement ou un résultat visible. Propose un seuil chiffré seulement s’il sert à prendre une décision et précise s’il s’agit d’une cible ou d’une mesure.
+- Si plusieurs personnes rencontrent des difficultés différentes, choisis l’acteur pour lequel tu peux décrire une action et une friction précises. Indique à quel moment les autres entrent dans ce parcours.
+- Si plusieurs frictions sont plausibles, compare leurs conséquences, leur fréquence connue et ta capacité à observer la situation. Indique pourquoi celle retenue mérite d’être traitée d’abord.
+- Distingue une observation, un récit et une hypothèse. Si tu disposes seulement d’une intuition, dis ce qu’une personne pourrait raconter ou montrer pour la confirmer.
+- Choisis un signe de réussite visible. Un délai ou une cible chiffrée est utile si la comparaison aide à trancher. Précise si le nombre correspond à une mesure ou à un objectif.
 
 ## Rendre les trois champs du carnet
 
-- **Qui rencontre le problème ?** Un acteur, son objectif et la situation où il agit.
-- **Qu’est-ce qui coince aujourd’hui ?** Une action concrète, le procédé actuel et sa conséquence.
-- **Quel signe montrera que ça va mieux ?** Une situation comparable et un résultat que quelqu’un peut constater.
+- **Qui rencontre le problème ?** Un public, l’action et la situation dans laquelle il agit.
+- **Qu’est-ce qui coince aujourd’hui ?** Le procédé actuel, l’étape qui coince et sa conséquence.
+- **Quel signe montrera que ça va mieux ?** Un résultat observable dans une situation comparable.
 
-Exemple fictif · Avant un pique-nique, une participante doit parcourir la conversation du groupe pour savoir quel plat manque. Le signe de réussite est qu’elle identifie un élément libre et annonce sa contribution sans demander à l’organisateur. La fréquence du problème reste à vérifier.
+Exemple · Après une sortie, la personne qui a avancé les frais cherche les montants dans plusieurs messages et refait ses calculs à chaque nouvel achat. Le signe utile est que chacun puisse retrouver sa part et comprendre son solde à partir des mêmes dépenses. La fréquence des oublis reste à vérifier.

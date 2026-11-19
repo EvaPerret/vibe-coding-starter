@@ -1,20 +1,30 @@
 ---
 name: adapter-starter
-description: Traduire un parcours en une évolution ciblée du starter Next.js. À utiliser pour choisir entre une démo locale et un usage partagé, ou pour implémenter le premier parcours sur demande.
+description: Transformer un parcours validé en changements ciblés dans le starter Next.js, Drizzle et Neon. À utiliser lorsqu’il faut choisir où placer une fonctionnalité ou la réaliser dans le dépôt.
 ---
 
-## Trouver le plus petit changement qui couvre le parcours
+## Lire le parcours et le code existant
 
-Lis le brief, le README et `AGENTS.md`. Repère les routes, composants, styles et données qui servent déjà l’usage. Note l’état de départ, l’action, le retour à l’écran et ce qui doit rester vrai après actualisation ou depuis un autre appareil. Si le périmètre a changé, reprends cette décision avec le participant avant de retoucher le code concerné.
+Lis le brief, `AGENTS.md`, les routes concernées et les contrats de données utilisés. Identifie l’action principale, son échec le plus probable et ce qui doit rester vrai après actualisation ou depuis un autre appareil. Si le choix de persistance change le parcours, rends ce choix explicite avant d’implémenter.
 
-- **Contenu ou maquette.** Garde des données fictives dans le projet si le scénario consiste à lire, parcourir ou comparer. Garde le rendu côté serveur par défaut.
-- **Démo sur un navigateur.** Ajoute un composant client au plus près de l’interaction. Utilise l’état React pendant la session et le stockage navigateur uniquement si retrouver un état local après actualisation fait partie du besoin. Valide la forme des données stockées à la lecture. Si l’écriture échoue, affiche le résultat réel et laisse une voie de reprise.
-- **Données partagées.** Fais traiter l’action par le serveur. Vérifie la saisie et les droits à l’entrée. Utilise `getDb()` et les contraintes de `src/db/schema.ts` pour les règles qui doivent tenir malgré des actions simultanées. Définis le résultat à afficher en cas de conflit. Si la structure change, suis la procédure de migration du README et applique-la uniquement à l’environnement autorisé.
+| Besoin | Point de départ dans le starter |
+| --- | --- |
+| Afficher des données ou un écran | Rends depuis `src/app`. Garde les composants serveur par défaut. Réutilise les styles et les tokens de `src/app/globals.css`. |
+| Gérer une interaction | Place l’état et les composants clients au plus près de l’interaction. Si le résultat doit survivre à la session ou être partagé, lis-le depuis sa source de vérité. |
+| Faire une écriture partagée | Traite l’action côté serveur. Vérifie les entrées et les droits avant d’écrire. Utilise `getDb()` et les contraintes de `src/db/schema.ts` pour les invariants qui doivent tenir entre plusieurs requêtes. |
+| Changer la structure des données | Génère une migration Drizzle versionnée, relis-la et applique-la à l’environnement autorisé. Si des données existent, décide comment les préserver et traite chaque consommateur du schéma. |
 
-Une dépendance ou un service supplémentaire doit résoudre un besoin concret du parcours. Précise le coût côté participant et les implications pour les données ou le déploiement.
+## Décrire ou réaliser la tranche utile
 
-## Adapter selon la demande
+- Pour un cadrage, indique les fichiers ou modules à réutiliser, le trajet d’une saisie jusqu’au retour d’écran et la règle que le serveur doit faire respecter.
+- Pour une implémentation, réalise ensemble la saisie, l’action qui enregistre et l’affichage du résultat. Traite l’erreur à sa source. Si une écriture échoue ou est refusée, garde une voie de reprise pour l’utilisateur et évite d’afficher un succès.
+- En cas de relance ou de double confirmation, détermine quelles écritures peuvent être répétées et lesquelles doivent être uniques. Si la fonctionnalité touche plusieurs écritures, vérifie que le pilote et le schéma permettent une mise à jour cohérente.
+- Réutilise la pile existante. Ajoute un service ou une dépendance seulement si le parcours impose un besoin concret. Suis le README et la documentation Next.js installée pour les API que le projet n’utilise pas déjà.
 
-Pour une demande de cadrage, livre le scénario retenu, les parties du starter à réutiliser, les fichiers à modifier, la portée de la persistance et les décisions encore ouvertes. Pour une demande d’implémentation, réalise le parcours, traite son blocage principal et vérifie le résultat par le point d’entrée habituel. Dans le bilan, indique le comportement vérifié et les limites qui changent la démo. Corrige la documentation du dépôt si une commande ou une convention utilisée change.
+## Résultat attendu
 
-Exemple du TP · Garde la page dans `src/app` et lis les réservations depuis Neon dans un composant serveur. Traite « Je m’en charge » avec une action serveur Next.js. Déclare une seule réservation possible par élément dans le schéma Drizzle et gère le conflit au moment de l’écriture. La page doit refléter cet état partagé depuis un autre appareil après actualisation.
+Donne le parcours accessible, la règle vérifiée et les limites utiles à la démonstration. Si des migrations sont concernées, indique l’environnement qui les a reçues. Pour une évolution, précise quel comportement existant tu as repris et comment accéder au nouveau.
+
+## Exemple dans le starter
+
+Pour les dépenses entre amis, le serveur valide un montant positif et un payeur membre du groupe, puis enregistre l’écriture dans Neon. Calcule les soldes à partir des dépenses en centimes. Un remboursement confirmé est une écriture du payeur vers le bénéficiaire. La confirmation doit s’appuyer sur l’état courant et éviter un double enregistrement. Après un conflit, l’écran explique pourquoi la proposition doit être recalculée.
