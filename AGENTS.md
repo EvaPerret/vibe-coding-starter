@@ -2,6 +2,10 @@
 
 Ce dépôt sert à créer le premier parcours utile d’une application web. Il démarre avec une page et un schéma vide.
 
+## Mise en route
+
+Pour installer ou lancer le starter, suis [preparer-atelier](.agents/skills/preparer-atelier/SKILL.md). Le premier démarrage est local. Configure les services externes si l’utilisateur souhaite les utiliser.
+
 ## Conception
 
 - Reformuler le besoin, la personne concernée et le résultat observable avant d’implémenter. Avancer par parcours court. Utiliser des données fictives pendant le prototypage.

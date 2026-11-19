@@ -2,7 +2,17 @@
 
 Une base pour démarrer ton propre projet après l’atelier. Le dépôt contient une page à remplacer, un accès serveur à Neon et un schéma PostgreSQL vide. Tu peux esquisser ton interface avant de créer une base.
 
-## Démarrer
+## Démarrer avec Codex ou Claude Code
+
+Ouvre une session **locale** de ton agent avec accès au terminal, dans le dossier où tu veux travailler. Connecte-toi à ton compte agent. Avant même d’avoir cloné le starter, tu peux lui envoyer ce message.
+
+> Prépare le starter de l’atelier Pepit’ozer sur cette machine. Vérifie Git et Node.js 24 et installe ce qui manque avec les outils officiels disponibles. Clone https://github.com/ThomasLaforge/vibe-coding-starter.git dans un nouveau dossier si besoin. Ouvre ensuite le fichier `.agents/skills/preparer-atelier/SKILL.md` du projet et suis le parcours local jusqu’à ce que la page d’accueil s’ouvre.
+
+Dans un dépôt déjà ouvert, demande simplement « Utilise le skill `preparer-atelier` et démarre le projet en local ». Dans Claude Code, tu peux aussi saisir `/preparer-atelier`. [Procédure suivie par l’agent](.agents/skills/preparer-atelier/SKILL.md)
+
+Si tu veux publier le prototype ou le relier à une vraie base, demande ensuite à l’agent de t’accompagner pour GitHub, Vercel ou Neon. Valide toi-même les connexions demandées dans le navigateur. Pour Neon, ajoute les URL dans `.env.local` si l’agent ne peut pas les récupérer via les outils officiels.
+
+## Démarrer à la main
 
 Installe [Node.js 24 LTS](https://nodejs.org/en/download). Si tu utilises nvm, `nvm use` choisit la version du projet.
 
