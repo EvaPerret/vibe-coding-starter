@@ -19,3 +19,7 @@ Ce dépôt sert à créer le premier parcours utile d’une application web. Il 
 - Accéder à Neon côté serveur via `getDb()` dans `src/db/index.ts`. Mettre les tables et leurs contraintes dans `src/db/schema.ts`.
 - Versionner le SQL généré et les métadonnées dans `drizzle/`. Relire une migration avant de l’appliquer et commencer sur une branche Neon de développement. Obtenir un accord explicite et prévoir sauvegarde et retour arrière avant une opération destructive.
 - Garder les secrets dans `.env.local` ou chez l’hébergeur. Ne jamais publier une URL de connexion ni utiliser `NEXT_PUBLIC_` pour une valeur secrète.
+
+## Skills de conception
+
+Les recettes du projet sont dans `.agents/skills/`. Prends celle qui correspond à la décision en cours. Après un pivot, reprends le cadrage avant de retoucher le code. Le [README](README.md#skills-de-conception) indique quand utiliser chaque recette.

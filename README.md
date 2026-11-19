@@ -36,3 +36,21 @@ Le pilote Neon HTTP convient aux requêtes courtes. Si une fonctionnalité a bes
 Importe ton propre dépôt comme projet Next.js et utilise Node.js 24. Lorsque ton parcours utilise Neon, ajoute `DATABASE_URL` côté serveur dans chaque environnement concerné et associe la préproduction et la production à leurs branches Neon respectives. Applique les migrations séparément avec l’URL directe de l’environnement visé. `npm run build` compile l’application.
 
 Pour travailler avec un agent, ouvre le dépôt et donne-lui ton brief issu du carnet. Les conventions du projet sont dans [AGENTS.md](AGENTS.md).
+
+## Skills de conception
+
+Ouvre le dépôt dans ton agent et demande le skill qui correspond à ta prochaine décision. Si ton outil ne charge pas `.agents/skills/` automatiquement, donne-lui le `SKILL.md` correspondant et le fichier `AGENTS.md`.
+
+| Quand | Quel skill |
+| --- | --- |
+| Explorer une idée ou recadrer après un pivot | [cadrer-probleme](.agents/skills/cadrer-probleme/SKILL.md) |
+| Préciser les personas et les alternatives du marché | [etudier-public](.agents/skills/etudier-public/SKILL.md) |
+| Dessiner le parcours et son wireframe | [dessiner-parcours](.agents/skills/dessiner-parcours/SKILL.md) |
+| Choisir les couleurs, la typo et les composants | [definir-direction-visuelle](.agents/skills/definir-direction-visuelle/SKILL.md) |
+| Préparer une maquette et la faire essayer | [critiquer-maquette](.agents/skills/critiquer-maquette/SKILL.md) |
+| Choisir le POC, le MVP et les versions suivantes | [definir-mvp](.agents/skills/definir-mvp/SKILL.md) |
+| Adapter le template au premier parcours | [adapter-starter](.agents/skills/adapter-starter/SKILL.md) |
+| Préparer une automatisation ou un lien vers un outil externe | [cadrer-automatisation](.agents/skills/cadrer-automatisation/SKILL.md) |
+| Transmettre le brief et la démo à un dev | [preparer-relais](.agents/skills/preparer-relais/SKILL.md) |
+
+Exemple pour commencer · « Utilise `cadrer-probleme`. Je veux simplifier les inscriptions à mes ateliers. Pose-moi une question à la fois et aide-moi à trouver un signe de réussite. »
