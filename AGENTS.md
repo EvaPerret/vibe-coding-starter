@@ -1,10 +1,10 @@
-# Starter Next.js + Neon
+# Application Next.js + Supabase
 
 Ce dépôt sert à créer le premier parcours utile d’une application web. Il démarre avec une page et un schéma vide.
 
 ## Mise en route
 
-Suis [setup](.agents/skills/setup/SKILL.md) pour lancer le starter et le relier à Neon sur demande. Suis [publish](.agents/skills/publish/SKILL.md) pour une première mise en ligne sur Vercel ou une mise à jour demandée. Si la personne suit l’atelier, ouvre le [TP Dépenses entre amis](TP-depenses-entre-amis.md) et reste à l’étape qu’elle a demandée.
+Suis [setup](.agents/skills/setup/SKILL.md) pour lancer le projet. Si la personne suit l’atelier, ouvre le [TP Dépenses entre amis](TP-depenses-entre-amis.md) et reste à l’étape qu’elle a demandée.
 
 ## Conception
 
@@ -21,8 +21,8 @@ Suis [setup](.agents/skills/setup/SKILL.md) pour lancer le starter et le relier 
 
 ## Données
 
-- Accéder à Neon côté serveur via `getDb()` dans `src/db/index.ts`. Mettre les tables et leurs contraintes dans `src/db/schema.ts`.
-- Versionner le SQL généré et les métadonnées dans `drizzle/`. Relire une migration avant de l’appliquer et commencer sur une branche Neon de développement. Obtenir un accord explicite et prévoir sauvegarde et retour arrière avant une opération destructive.
+- Accéder à Supabase côté serveur via `getSupabase()` dans `src/db/index.ts`.
+- Versionner les migrations SQL dans `supabase/migrations/`. Activer RLS sur chaque table exposée et limiter les droits aux opérations nécessaires.
 - Garder les secrets dans `.env.local` ou chez l’hébergeur. Ne jamais publier une URL de connexion ni utiliser `NEXT_PUBLIC_` pour une valeur secrète.
 
 ## Skills de conception

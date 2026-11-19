@@ -1,21 +1,79 @@
 @import "tailwindcss";
 
 @theme {
-  --color-canvas: #f6f8fc;
-  --color-ink: #0e1728;
-  --color-muted: #4b5b72;
-  --color-accent: #1458db;
+  --color-canvas: #f5f7fb;
+  --color-panel: #f0f4ff;
+  --color-ink: #121a2c;
+  --color-muted: #59657a;
+  --color-subtle: #8a94a7;
+  --color-line: #dfe4ed;
+  --color-accent: #3157d5;
+  --color-accent-soft: #e8edff;
+  --color-success: #16725b;
+  --color-success-soft: #e4f5ee;
+  --color-danger: #b23b4a;
+  --color-danger-soft: #fce9ec;
+  --shadow-card: 0 16px 48px rgba(28, 41, 75, 0.08);
 }
 
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     font-family: var(--font-sans);
     background: var(--color-canvas);
     color: var(--color-ink);
+    margin: 0;
   }
 
   :focus-visible {
     outline: 3px solid var(--color-accent);
     outline-offset: 4px;
+  }
+
+  input {
+    outline: none;
+  }
+
+  input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-soft);
+  }
+}
+
+@layer components {
+  .avatar {
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .avatar-small {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.875rem;
+  }
+
+  .avatar-lina {
+    background: #e9e8ff;
+    color: #5646b8;
+  }
+
+  .avatar-noe {
+    background: #dff3f4;
+    color: #14707a;
+  }
+
+  .avatar-sam {
+    background: #fff0d9;
+    color: #9b6418;
   }
 }
