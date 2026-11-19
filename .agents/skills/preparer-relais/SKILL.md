@@ -17,4 +17,4 @@ Pour chaque question importante, donne son contexte et ce qui dépend de la rép
 
 Ouvre par le public, le problème et le parcours démontré. Ajoute les liens utiles et, dans les champs du carnet, **Maquette, démo ou retour recueilli** puis **Questions à trancher avec le dev**. Termine par la première décision à discuter et la personne ou le rôle qui peut la trancher, si c’est connu.
 
-Exemple fictif · La démo « Qui apporte quoi ? » garde les réservations dans le navigateur utilisé. Avant une diffusion au groupe, décider qui peut modifier une contribution et quel message montrer si deux participants choisissent le même élément.
+Exemple du TP · Joins le lien de prévisualisation Vercel et indique si le partage des réservations via Neon a été constaté dans deux sessions. Si le groupe souhaite pouvoir annuler une réservation, indique qui doit pouvoir le faire et quelles preuves de ce droit sont nécessaires.

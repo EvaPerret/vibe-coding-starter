@@ -19,4 +19,4 @@ Fixe le point de départ, les données minimales, l’action principale et le r�
 - **Ce qui attendra** avec la raison du report et le signal qui justifierait de reprendre le sujet.
 - Indique le POC seulement si une inconnue mérite d’être isolée. Précise le passage de la démo à l’usage réel si les deux sont envisagés.
 
-Exemple fictif · Avec un pique-nique et six éléments préremplis, choisir un élément libre et afficher la contribution après actualisation du même navigateur. Pour coordonner des participants sur plusieurs téléphones, le MVP doit rendre la contribution visible aux autres et traiter deux choix simultanés du même élément. La messagerie peut attendre.
+Exemple du TP · Avec un pique-nique et une liste préremplie, réserver un élément libre avec un prénom fictif. Ouvrir la page sur un autre appareil et retrouver la contribution après actualisation. Si l’élément a été pris entre l’affichage de la liste et la confirmation, signaler le conflit et laisser les autres choix accessibles. La messagerie peut attendre.

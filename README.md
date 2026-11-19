@@ -25,6 +25,17 @@ npm run dev
 
 Ouvre [localhost:3000](http://localhost:3000) ou l’adresse affichée dans le terminal. Modifie `src/app/page.tsx` pour façonner ton premier parcours. Si tu as utilisé **Use this template** sur GitHub, clone l’adresse de ton nouveau dépôt à la place. Si tu as cloné celui-ci directement, crée un dépôt GitHub vide à ton nom et remplace `origin` avec `git remote set-url origin <url-de-ton-dépôt>` avant de pousser.
 
+## TP · Qui apporte quoi ?
+
+Partez du starter vierge et ouvrez `AGENTS.md`. Le TP porte sur un seul pique-nique et une liste préremplie. Une personne voit ce qui manque, saisit un prénom fictif et indique ce qu’elle apporte. La contribution doit apparaître sur un autre appareil, après actualisation.
+
+1. Avec [definir-mvp](.agents/skills/definir-mvp/SKILL.md), décrivez le parcours et le cas où deux personnes choisissent le même élément.
+2. Avec [preparer-atelier](.agents/skills/preparer-atelier/SKILL.md), identifiez le dépôt personnel et préparez une branche Neon de développement. Utilisez le MCP Neon si le compte est connecté, ou la console Neon. Reliez le dépôt à Vercel et associez Neon à l’environnement de prévisualisation.
+3. Avec [adapter-starter](.agents/skills/adapter-starter/SKILL.md), réalisez la page Next.js et la réservation côté serveur avec Drizzle. Appliquez la migration versionnée à la branche Neon utilisée par la démo.
+4. Ouvrez le déploiement de prévisualisation sur deux appareils ou dans deux sessions indépendantes. Faites une réservation dans la première, actualisez la seconde et vérifiez que la contribution apparaît. Si les deux personnes choisissent le même élément, seule la première réservation aboutit.
+
+Les MCP servent à l’agent pendant la mise en place. L’application accède à Neon via le module serveur `src/db/index.ts`. Vercel peut déployer automatiquement depuis le dépôt Git connecté.
+
 ## Ce que la stack apporte
 
 - **Next.js App Router et TypeScript strict** donnent une place à l’interface et au code serveur dans le même projet.
