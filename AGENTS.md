@@ -14,6 +14,7 @@ Pour installer ou lancer le starter, suis [preparer-atelier](.agents/skills/prep
 
 ## Interface et serveur
 
+- Pour une API Next.js nouvelle dans le projet, consulte la documentation de la version installée dans `node_modules/next/dist/docs/`.
 - Mettre les routes et les layouts dans `src/app`. Garder les composants serveur par défaut. Utiliser `'use client'` au plus près d’un besoin d’interactivité.
 - Réutiliser les tokens de `src/app/globals.css` et les classes Tailwind. Préserver les libellés visibles, le focus clavier et la lisibilité sur mobile.
 - Valider les données externes et contrôler l’accès côté serveur, au point d’entrée. Utiliser des types explicites et traiter les erreurs près de la source.
