@@ -1,8 +1,20 @@
 ---
 name: adapter-starter
-description: Choisir ou adapter le template technique à partir du premier parcours utile. À utiliser pour démarrer un projet web, après un pivot ou avant d’ajouter un service.
+description: Traduire un parcours en une évolution ciblée du starter Next.js. À utiliser pour choisir entre une démo locale et un usage partagé, ou pour implémenter le premier parcours sur demande.
 ---
 
-Lis le brief, le README et `AGENTS.md`. Relie chaque besoin du premier parcours à ce qui existe déjà dans le dépôt. Distingue ce qui peut rester statique, ce qui exige du code serveur et ce qui nécessite une persistance.
+## Trouver le plus petit changement qui couvre le parcours
 
-Liste les modifications minimales à faire dans le starter. Quand le parcours impose une nouvelle dépendance, un service ou une autre stack, explicite le besoin concret et le coût de reprise. Après validation d’un changement durable, mets à jour les conventions et les commandes concernées dans `AGENTS.md` et le README.
+Lis le brief, le README et `AGENTS.md`. Repère les routes, composants, styles et données qui servent déjà l’usage. Note l’état de départ, l’action, le retour à l’écran et ce qui doit rester vrai après actualisation ou depuis un autre appareil. Si le périmètre a changé, reprends cette décision avec le participant avant de retoucher le code concerné.
+
+- **Contenu ou maquette.** Garde des données fictives dans le projet si le scénario consiste à lire, parcourir ou comparer. Garde le rendu côté serveur par défaut.
+- **Démo sur un navigateur.** Ajoute un composant client au plus près de l’interaction. Utilise l’état React pendant la session et le stockage navigateur uniquement si retrouver un état local après actualisation fait partie du besoin. Valide la forme des données stockées à la lecture. Si l’écriture échoue, affiche le résultat réel et laisse une voie de reprise.
+- **Données partagées.** Fais traiter l’action par le serveur. Vérifie la saisie et les droits à l’entrée. Utilise `getDb()` et les contraintes de `src/db/schema.ts` pour les règles qui doivent tenir malgré des actions simultanées. Définis le résultat à afficher en cas de conflit. Si la structure change, suis la procédure de migration du README et applique-la uniquement à l’environnement autorisé.
+
+Une dépendance ou un service supplémentaire doit résoudre un besoin concret du parcours. Précise le coût côté participant et les implications pour les données ou le déploiement.
+
+## Adapter selon la demande
+
+Pour une demande de cadrage, livre le scénario retenu, les parties du starter à réutiliser, les fichiers à modifier, la portée de la persistance et les décisions encore ouvertes. Pour une demande d’implémentation, réalise le parcours, traite son blocage principal et vérifie le résultat par le point d’entrée habituel. Dans le bilan, indique le comportement vérifié et les limites qui changent la démo. Corrige la documentation du dépôt si une commande ou une convention utilisée change.
+
+Exemple fictif · La liste du pique-nique reste dans `src/app` et le composant interactif conserve la contribution dans ce navigateur. Pour partager les contributions, ajoute une écriture serveur qui n’attribue l’élément que s’il est libre et renvoie un conflit si quelqu’un vient de le prendre.

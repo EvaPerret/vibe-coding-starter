@@ -49,7 +49,7 @@ Pour travailler avec un agent, ouvre le dépôt et donne-lui ton brief issu du c
 
 ## Skills de conception
 
-Ouvre le dépôt dans ton agent et demande le skill qui correspond à ta prochaine décision. Si ton outil ne charge pas `.agents/skills/` automatiquement, donne-lui le `SKILL.md` correspondant et le fichier `AGENTS.md`.
+Ouvre le dépôt dans ton agent et choisis le skill qui correspond à ta prochaine décision. Dans Claude Code, tu peux le lancer avec `/nom-du-skill`. Tu peux aussi donner le lien vers le `SKILL.md` et joindre ton brief du carnet ou un croquis. Les étapes du carnet fournissent les champs à compléter.
 
 | Quand | Quel skill |
 | --- | --- |
@@ -57,7 +57,7 @@ Ouvre le dépôt dans ton agent et demande le skill qui correspond à ta prochai
 | Préciser les personas et les alternatives du marché | [etudier-public](.agents/skills/etudier-public/SKILL.md) |
 | Dessiner le parcours et son wireframe | [dessiner-parcours](.agents/skills/dessiner-parcours/SKILL.md) |
 | Choisir les couleurs, la typo et les composants | [definir-direction-visuelle](.agents/skills/definir-direction-visuelle/SKILL.md) |
-| Préparer une maquette et la faire essayer | [critiquer-maquette](.agents/skills/critiquer-maquette/SKILL.md) |
+| Repérer le principal obstacle dans une maquette | [critiquer-maquette](.agents/skills/critiquer-maquette/SKILL.md) |
 | Choisir le POC, le MVP et les versions suivantes | [definir-mvp](.agents/skills/definir-mvp/SKILL.md) |
 | Adapter le template au premier parcours | [adapter-starter](.agents/skills/adapter-starter/SKILL.md) |
 | Préparer une automatisation ou un lien vers un outil externe | [cadrer-automatisation](.agents/skills/cadrer-automatisation/SKILL.md) |

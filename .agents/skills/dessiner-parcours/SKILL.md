@@ -1,8 +1,22 @@
 ---
 name: dessiner-parcours
-description: Transformer un croquis ou une situation d’usage en parcours principal et en scénario de blocage. À utiliser avant de détailler les écrans.
+description: Transformer une situation d’usage ou un croquis en parcours, wireframe annoté et scénario de récupération. À utiliser avant de détailler les écrans.
 ---
 
-Demande d’abord un croquis papier ou une description du parcours actuel. Propose ensuite un wireframe annoté pour l’écran clé. Pour chaque étape, explicite ce que la personne voit, ce qu’elle fait et ce qui lui confirme le résultat. Repère une décision ou une transition difficile, puis propose une manière de récupérer après ce blocage.
+## Tracer le parcours
 
-Rends **Le parcours principal** avec une action par ligne et **Un cas où ça coince** qui décrit ce que la personne voit et comment elle continue.
+Reprends le croquis ou le brief disponible. Note le point d’entrée, ce que la personne sait déjà et le résultat qui lui permet de partir. Si le point de départ manque, demande ce qui se passe juste avant l’ouverture de l’application.
+
+Décris une action de la personne par étape. Pour chaque action, indique l’information qui la rend possible et le retour qui indique ce qui s’est passé. Fais apparaître les passages entre deux personnes, appareils ou outils uniquement lorsqu’ils changent ce que l’utilisateur doit comprendre ou faire. Regroupe les étapes qui peuvent tenir sur le même écran sans rendre la décision plus difficile.
+
+## Annoter l’écran clé
+
+Choisis l’écran où la personne prend la décision qui conditionne la suite. Place du haut vers le bas le contexte, l’information utile et l’action principale. Annote les libellés et les liens vers les étapes suivantes. Ajoute l’état qui empêche le plus probablement de terminer le parcours. Précise quand il survient, quel message apparaît, ce qui reste utilisable et comment repartir. Préserve la saisie lorsque la personne peut corriger une erreur ou réessayer.
+
+## Rendre les champs du carnet
+
+- **Le parcours principal** avec une action par ligne, du point d’entrée à la confirmation.
+- **Un cas où ça coince** avec le signal visible, le résultat effectivement enregistré et l’action de reprise.
+- Ajoute le wireframe annoté sous forme de croquis à compléter ou de disposition textuelle si le participant demande de visualiser l’écran.
+
+Exemple fictif · Ouvrir le lien du pique-nique → repérer un élément libre → proposer de l’apporter → voir son prénom sur la ligne. Si l’élément visé est déjà pris, afficher son statut et laisser les autres éléments accessibles.

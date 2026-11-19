@@ -1,8 +1,22 @@
 ---
 name: definir-mvp
-description: Choisir un scénario de prototype et reporter les fonctionnalités superflues. À utiliser avant de demander une implémentation à l’agent.
+description: Cadrer le plus petit parcours à démontrer ou à mettre à disposition d’un public. À utiliser pour arbitrer le périmètre, définir un POC ou préparer un brief d’implémentation.
 ---
 
-Reprends le parcours et l’écran clé. Choisis une action complète et un cas où elle bloque. Décris les données fictives nécessaires et le retour observable. Si la proposition dépend d’un paiement, d’un compte ou d’un service externe, demande si une simulation répond à la question du prototype.
+## Identifier la décision à prendre
 
-Rends **le POC** s’il reste une inconnue à lever, **le MVP** comme premier parcours utilisable et **la suite** dans l’ordre où elle apporte de la valeur. Pour passer d’une version à l’autre, formule le résultat observable qui justifie la décision.
+Reprends le public, la friction et le parcours. Si une inconnue technique peut remettre en cause la suite, isole-la dans un POC avec un résultat qui permet de décider. Pour un prototype d’atelier, choisis une tâche qu’une personne peut accomplir de bout en bout avec des données fictives. Pour un MVP destiné à des utilisateurs en situation réelle, garde les fonctions, les règles et le niveau de fiabilité indispensables à cet usage.
+
+Précise le périmètre en termes d’usage. Quand l’objectif implique plusieurs personnes, appareils ou sessions, précise quels résultats elles doivent pouvoir partager. Décide si la démonstration peut simuler cette partie et indique ce qu’elle permettra d’apprendre.
+
+## Décrire le scénario et les limites
+
+Fixe le point de départ, les données minimales, l’action principale et le résultat observable. Couvre le blocage qui risque le plus d’empêcher la tâche et indique comment la personne reprend. Choisis les fonctions à reporter en fonction de leur valeur pour ce scénario. Si une promesse dépend de l’authentification, d’un paiement, d’une notification ou d’une base partagée, précise si elle est réelle, simulée ou reportée.
+
+## Rendre les champs du carnet
+
+- **Le scénario à montrer** avec le public, l’état initial, l’action, la confirmation et le cas de blocage.
+- **Ce qui attendra** avec la raison du report et le signal qui justifierait de reprendre le sujet.
+- Indique le POC seulement si une inconnue mérite d’être isolée. Précise le passage de la démo à l’usage réel si les deux sont envisagés.
+
+Exemple fictif · Avec un pique-nique et six éléments préremplis, choisir un élément libre et afficher la contribution après actualisation du même navigateur. Pour coordonner des participants sur plusieurs téléphones, le MVP doit rendre la contribution visible aux autres et traiter deux choix simultanés du même élément. La messagerie peut attendre.
